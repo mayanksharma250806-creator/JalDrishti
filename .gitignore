@@ -12,3 +12,6 @@ __pycache__/
 *.zip
 .vscode/
 .idea/
+
+# Portable git tool
+.git_tool/
