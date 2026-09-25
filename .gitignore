@@ -1,0 +1,14 @@
+# Binaries and executables
+cloudflared.exe
+*.exe
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.class
+*.log
+
+# Local temporary or scratch files
+*.zip
+.vscode/
+.idea/
