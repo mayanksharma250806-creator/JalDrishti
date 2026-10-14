@@ -435,17 +435,17 @@ async function loadEvidenceFeed() {
     const timeStr = item.timestamp ? item.timestamp.split('T')[0] : 'Today';
 
     return `
-      <div class="card" style="padding: 10px; background: rgba(11, 26, 45, 0.85); border: 1px solid var(--border-light); display: flex; flex-direction: column; justify-content: space-between;">
+      <div class="card" style="padding: 12px; background: #ffffff; border: 1px solid #cbd5e1; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);">
         <div>
           <div style="position: relative; height: 110px; overflow: hidden; border-radius: 6px; margin-bottom: 8px;">
             <img src="${imgSrc}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='assets/sample_check_dam.jpg'" alt="${item.filename}">
-            <span class="badge-status ${badgeClass}" style="position: absolute; top: 6px; right: 6px; font-size: 10px;">${item.status}</span>
+            <span class="badge-status ${badgeClass}" style="position: absolute; top: 6px; right: 6px; font-size: 10px; background: rgba(255, 255, 255, 0.95); box-shadow: 0 2px 6px rgba(0,0,0,0.15);">${item.status}</span>
           </div>
-          <div style="font-size: 12.5px; font-weight: 700; color: #fff;">${item.structure_type || 'Watershed Civil Asset'}</div>
-          <div style="font-size: 11px; color: var(--accent-cyan); margin-top: 2px;">
+          <div style="font-size: 13px; font-weight: 700; color: #0f172a;">${item.structure_type || 'Watershed Civil Asset'}</div>
+          <div style="font-size: 11px; color: #0284c7; font-weight: 600; margin-top: 2px;">
             ${item.project_id || 'WD-204'} • ${item.gps_lat ? `${Number(item.gps_lat).toFixed(4)}°N, ${Number(item.gps_lng).toFixed(4)}°E` : 'Geotagged'}
           </div>
-          <div style="font-size: 10.5px; color: var(--text-muted); margin-top: 4px;">
+          <div style="font-size: 11px; color: #64748b; margin-top: 4px;">
             Verified: ${timeStr} • Confidence: ${item.ai_confidence || 95}%
           </div>
         </div>
@@ -453,7 +453,7 @@ async function loadEvidenceFeed() {
           <button class="btn btn-primary" style="flex: 1; padding: 4px 6px; font-size: 10.5px;" onclick="openAIFromUpload('${item.filename}')">
             🔬 Inspect AI Scan
           </button>
-          <button class="btn" style="padding: 4px 8px; font-size: 10.5px;" onclick="navigateTo('upload')">
+          <button class="btn" style="padding: 4px 8px; font-size: 10.5px; background: #ffffff; color: #0f172a; border-color: #cbd5e1;" onclick="navigateTo('upload')">
             Verify
           </button>
         </div>
@@ -958,7 +958,7 @@ function renderVerificationSuccess(data) {
     : '27.71820° N, 77.50280° E (Centroid Assigned)';
 
   const siltWarning = isFlagged ? `
-    <div style="background: rgba(239, 68, 68, 0.15); border: 1px solid #ef4444; border-radius: 8px; padding: 10px 14px; margin-bottom: 14px; font-size: 12px; color: #fca5a5;">
+    <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 10px 14px; margin-bottom: 14px; font-size: 12px; color: #991b1b;">
       <b>⚠️ CRITICAL SILTATION WARNING:</b> Severe sediment accumulation detected. Desiltation tender recommended before upcoming monsoon.
     </div>
   ` : '';
@@ -968,7 +968,7 @@ function renderVerificationSuccess(data) {
       <div>
         <h4 style="color: ${statusColor}; font-size: 16px; margin: 0 0 4px 0;">${statusTitle}</h4>
         <div style="font-size: 11.5px; color: var(--text-secondary);">
-          SHA-256: <span style="font-family: monospace; color: #a5f3fc;">${(data.sha256 || '').substring(0, 24)}...</span>
+          SHA-256: <span style="font-family: monospace; color: #0284c7;">${(data.sha256 || '').substring(0, 24)}...</span>
         </div>
       </div>
       <span class="badge-status ${statusBadge}">${data.status || 'Verified'}</span>
@@ -977,32 +977,32 @@ function renderVerificationSuccess(data) {
     ${siltWarning}
 
     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; font-size: 12px; margin-bottom: 16px;">
-      <div class="report-item" style="background: rgba(12, 28, 48, 0.7); border-color: var(--border); padding: 10px; border-radius: 8px;">
+      <div class="report-item" style="background: #f8fafc; border: 1px solid var(--border); padding: 10px; border-radius: 8px;">
         <label style="color: var(--text-muted); font-size: 10.5px; text-transform: uppercase;">GPS Lat / Long</label>
-        <div style="color: #67e8f9; font-weight: 700; margin-top: 2px;">${gpsInfo}</div>
+        <div style="color: #0284c7; font-weight: 700; margin-top: 2px;">${gpsInfo}</div>
       </div>
 
-      <div class="report-item" style="background: rgba(12, 28, 48, 0.7); border-color: var(--border); padding: 10px; border-radius: 8px;">
+      <div class="report-item" style="background: #f8fafc; border: 1px solid var(--border); padding: 10px; border-radius: 8px;">
         <label style="color: var(--text-muted); font-size: 10.5px; text-transform: uppercase;">Capture Device</label>
-        <div style="color: #fff; font-weight: 600; margin-top: 2px;">${data.device_model || 'Trimble GIS Receiver'}</div>
+        <div style="color: #0f172a; font-weight: 600; margin-top: 2px;">${data.device_model || 'Trimble GIS Receiver'}</div>
       </div>
 
-      <div class="report-item" style="background: rgba(12, 28, 48, 0.7); border-color: var(--border); padding: 10px; border-radius: 8px;">
+      <div class="report-item" style="background: #f8fafc; border: 1px solid var(--border); padding: 10px; border-radius: 8px;">
         <label style="color: var(--text-muted); font-size: 10.5px; text-transform: uppercase;">Structure Classification</label>
         <div style="color: var(--accent-teal); font-weight: 700; margin-top: 2px;">${data.ai_results?.structure_type || 'Masonry Check Dam'}</div>
       </div>
 
-      <div class="report-item" style="background: rgba(12, 28, 48, 0.7); border-color: var(--border); padding: 10px; border-radius: 8px;">
+      <div class="report-item" style="background: #f8fafc; border: 1px solid var(--border); padding: 10px; border-radius: 8px;">
         <label style="color: var(--text-muted); font-size: 10.5px; text-transform: uppercase;">AI Detection Confidence</label>
-        <div style="color: #fbbf24; font-weight: 800; margin-top: 2px;">${data.ai_results?.ai_confidence || 95.8}%</div>
+        <div style="color: #d97706; font-weight: 800; margin-top: 2px;">${data.ai_results?.ai_confidence || 95.8}%</div>
       </div>
 
-      <div class="report-item" style="background: rgba(12, 28, 48, 0.7); border-color: var(--border); padding: 10px; border-radius: 8px;">
+      <div class="report-item" style="background: #f8fafc; border: 1px solid var(--border); padding: 10px; border-radius: 8px;">
         <label style="color: var(--text-muted); font-size: 10.5px; text-transform: uppercase;">Water Storage Level</label>
-        <div style="color: #38bdf8; font-weight: 600; margin-top: 2px;">${data.ai_results?.water_retention || '84% (Optimal)'}</div>
+        <div style="color: #0284c7; font-weight: 600; margin-top: 2px;">${data.ai_results?.water_retention || '84% (Optimal)'}</div>
       </div>
 
-      <div class="report-item" style="background: rgba(12, 28, 48, 0.7); border-color: var(--border); padding: 10px; border-radius: 8px;">
+      <div class="report-item" style="background: #f8fafc; border: 1px solid var(--border); padding: 10px; border-radius: 8px;">
         <label style="color: var(--text-muted); font-size: 10.5px; text-transform: uppercase;">Siltation Risk</label>
         <div style="color: ${isFlagged ? '#ef4444' : '#10b981'}; font-weight: 700; margin-top: 2px;">${data.ai_results?.siltation_risk || 'Low (8%)'}</div>
       </div>
@@ -1013,7 +1013,7 @@ function renderVerificationSuccess(data) {
         🔬 Inspect AI Bounding Box & Silt Scan &rarr;
       </button>
       ${data.gps ? `
-        <button class="btn" style="background: rgba(14, 30, 50, 0.9);" onclick="showOnMap(${data.gps.lat}, ${data.gps.lng})">
+        <button class="btn" style="background: #ffffff; color: #0f172a; border-color: #cbd5e1;" onclick="showOnMap(${data.gps.lat}, ${data.gps.lng})">
           🗺️ View on Map
         </button>
       ` : ''}
@@ -1021,6 +1021,13 @@ function renderVerificationSuccess(data) {
   `;
 
   showToast(isFlagged ? "⚠️ Warning: Flagged for high siltation!" : "✓ Photo verified with EXIF GPS tags & AI classification.");
+}
+
+function openAIWithSample(filename) {
+  navigateTo('analysis');
+  setTimeout(() => {
+    loadSampleForAI(`assets/${filename}`);
+  }, 150);
 }
 
 function openAIFromUpload(filename) {

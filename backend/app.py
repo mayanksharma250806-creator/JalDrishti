@@ -18,7 +18,7 @@ FRONTEND_DIR = BASE_DIR.parent / "frontend"
 UPLOADS_DIR = BASE_DIR / "uploads"
 UPLOADS_DIR.mkdir(exist_ok=True)
 
-app = Flask(__name__, static_folder=str(FRONTEND_DIR), static_url_path="")
+app = Flask(__name__, static_folder=None)
 CORS(app)
 
 # Ensure DB is initialized

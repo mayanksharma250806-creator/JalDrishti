@@ -152,29 +152,149 @@
             </div>
           </div>
 
-          <!-- Real Check Dam Hero Image from the user's photo -->
-          <div class="check-dam-hero-container">
-            <img src="assets/check_dam_hero_banner.jpg" alt="Active Watershed Check Dam Spillway" class="check-dam-hero-img">
-            <div class="check-dam-hero-overlay">
-              <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-                <span class="hero-live-badge">● WDC-PMKSY 2.0 MODEL ASSET</span>
-                <h3 style="font-size: 17px; font-weight: 800; color: #fff; margin: 0;">
-                  Active Masonry Check Dam & Multi-Chute Spillway Impoundment
-                </h3>
+          <!-- Ground Truth Asset Registry & Real Field Surveillance (Real Watershed Structure Photos) -->
+          <div class="ground-evidence-gallery-container" style="padding: 18px 20px; background: #ffffff;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 10px; border-bottom: 1px solid #e2e8f0; padding-bottom: 12px;">
+              <div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="background: #0284c7; color: #fff; font-size: 10.5px; font-weight: 800; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">● WDC-PMKSY 2.0 FIELD SURVEILLANCE</span>
+                  <h3 style="font-size: 16px; font-weight: 800; color: #0f2744; margin: 0;">
+                    Ground Truth Asset Registry & Active Field Water Structures
+                  </h3>
+                </div>
+                <p style="font-size: 12px; color: #475569; margin: 4px 0 0 0;">
+                  Real-time geotagged field telemetry & computer vision validation across Bundelkhand and Yamuna Basin watersheds
+                </p>
               </div>
-              <p style="font-size: 12px; color: #e2e8f0; margin: 6px 0 0 0; max-width: 850px; text-shadow: 0 1px 3px rgba(0,0,0,0.8);">
-                Continuous streamflow detention reservoir for downstream alluvial aquifer recharge, groundwater elevation, and agricultural moisture security across Bundelkhand watershed catchments.
-              </p>
+              <div style="display: flex; gap: 8px; align-items: center;">
+                <span style="font-size: 11px; color: #059669; font-weight: 700; background: #ecfdf5; border: 1px solid #a7f3d0; padding: 4px 10px; border-radius: 999px;">✓ 4 Ground Structures Active</span>
+                <button class="btn btn-primary" style="padding: 5px 12px; font-size: 11px;" onclick="navigateTo('upload')">+ Upload Field Evidence</button>
+              </div>
+            </div>
+
+            <!-- 4 Real Field Photo Cards Grid -->
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;" id="realAssetGalleryGrid">
+              <!-- Card 1: Masonry Check Dam -->
+              <div class="real-asset-card" style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column;">
+                <div style="position: relative; height: 145px; overflow: hidden; background: #e2e8f0;">
+                  <img src="assets/sample_check_dam.jpg" alt="Active Masonry Check Dam Spillway" style="width: 100%; height: 100%; object-fit: cover;" class="asset-zoom-img">
+                  <span class="badge-status badge-verified" style="position: absolute; top: 8px; right: 8px; font-size: 10px; background: rgba(255, 255, 255, 0.95); box-shadow: 0 2px 6px rgba(0,0,0,0.15);">● Civil Verified</span>
+                  <span style="position: absolute; bottom: 8px; left: 8px; background: rgba(15, 23, 42, 0.85); color: #fff; font-size: 9.5px; font-weight: 700; padding: 2px 6px; border-radius: 4px; font-family: monospace;">GPS: 27.7180°N, 77.5020°E</span>
+                </div>
+                <div style="padding: 12px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                  <div>
+                    <div style="font-size: 10.5px; font-weight: 700; color: #0284c7; text-transform: uppercase;">WD-204 • Mathura (UP)</div>
+                    <div style="font-size: 13px; font-weight: 800; color: #0f172a; margin-top: 2px;">Masonry Check Dam & Spillway</div>
+                    <div style="font-size: 11.5px; color: #475569; margin-top: 4px; line-height: 1.4;">Continuous streamflow detention for aquifer recharge & soil conservation.</div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px; padding-top: 8px; border-top: 1px solid #e2e8f0; font-size: 11px;">
+                      <span style="color: #64748b;">AI Water Retention:</span>
+                      <b style="color: #0284c7;">84% (Optimal)</b>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 3px; font-size: 11px;">
+                      <span style="color: #64748b;">AI Confidence:</span>
+                      <b style="color: #059669;">96.8% YOLOv8</b>
+                    </div>
+                  </div>
+                  <div style="display: flex; gap: 6px; margin-top: 12px;">
+                    <button class="btn btn-primary" style="flex: 1; padding: 5px 6px; font-size: 10.5px;" onclick="openAIWithSample('sample_check_dam.jpg')">🔬 AI Vision Scan</button>
+                    <button class="btn" style="padding: 5px 8px; font-size: 10.5px; background: #ffffff; color: #0f172a; border-color: #cbd5e1;" onclick="showOnMap(27.7180, 77.5020)">🗺️ Map</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2: Percolation Recharge Basin -->
+              <div class="real-asset-card" style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column;">
+                <div style="position: relative; height: 145px; overflow: hidden; background: #e2e8f0;">
+                  <img src="assets/sample_percolation_tank.jpg" alt="Percolation Recharge Basin" style="width: 100%; height: 100%; object-fit: cover;" class="asset-zoom-img">
+                  <span class="badge-status badge-verified" style="position: absolute; top: 8px; right: 8px; font-size: 10px; background: rgba(255, 255, 255, 0.95); box-shadow: 0 2px 6px rgba(0,0,0,0.15);">● Recharge Active</span>
+                  <span style="position: absolute; bottom: 8px; left: 8px; background: rgba(15, 23, 42, 0.85); color: #fff; font-size: 9.5px; font-weight: 700; padding: 2px 6px; border-radius: 4px; font-family: monospace;">GPS: 27.7167°N, 77.9333°E</span>
+                </div>
+                <div style="padding: 12px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                  <div>
+                    <div style="font-size: 10.5px; font-weight: 700; color: #0284c7; text-transform: uppercase;">WD-311 • Aligarh (UP)</div>
+                    <div style="font-size: 13px; font-weight: 800; color: #0f172a; margin-top: 2px;">Percolation Recharge Basin</div>
+                    <div style="font-size: 11.5px; color: #475569; margin-top: 4px; line-height: 1.4;">Unconfined aquifer direct infiltration with intact filter bed & bunding.</div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px; padding-top: 8px; border-top: 1px solid #e2e8f0; font-size: 11px;">
+                      <span style="color: #64748b;">AI Water Retention:</span>
+                      <b style="color: #0284c7;">91% (Optimal)</b>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 3px; font-size: 11px;">
+                      <span style="color: #64748b;">AI Confidence:</span>
+                      <b style="color: #059669;">97.2% YOLOv8</b>
+                    </div>
+                  </div>
+                  <div style="display: flex; gap: 6px; margin-top: 12px;">
+                    <button class="btn btn-primary" style="flex: 1; padding: 5px 6px; font-size: 10.5px;" onclick="openAIWithSample('sample_percolation_tank.jpg')">🔬 AI Vision Scan</button>
+                    <button class="btn" style="padding: 5px 8px; font-size: 10.5px; background: #ffffff; color: #0f172a; border-color: #cbd5e1;" onclick="showOnMap(27.7167, 77.9333)">🗺️ Map</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3: Earthen Farm Pond -->
+              <div class="real-asset-card" style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column;">
+                <div style="position: relative; height: 145px; overflow: hidden; background: #e2e8f0;">
+                  <img src="assets/sample_farm_pond.jpg" alt="Earthen Farm Pond Silt Alert" style="width: 100%; height: 100%; object-fit: cover;" class="asset-zoom-img">
+                  <span class="badge-status badge-flagged" style="position: absolute; top: 8px; right: 8px; font-size: 10px; background: rgba(255, 255, 255, 0.95); box-shadow: 0 2px 6px rgba(0,0,0,0.15);">⚠️ Siltation Alert</span>
+                  <span style="position: absolute; bottom: 8px; left: 8px; background: rgba(15, 23, 42, 0.85); color: #fff; font-size: 9.5px; font-weight: 700; padding: 2px 6px; border-radius: 4px; font-family: monospace;">GPS: 27.0200°N, 78.3100°E</span>
+                </div>
+                <div style="padding: 12px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                  <div>
+                    <div style="font-size: 10.5px; font-weight: 700; color: #dc2626; text-transform: uppercase;">WD-118 • Agra (UP)</div>
+                    <div style="font-size: 13px; font-weight: 800; color: #0f172a; margin-top: 2px;">Earthen Farm Pond Basin</div>
+                    <div style="font-size: 11.5px; color: #475569; margin-top: 4px; line-height: 1.4;">Critical sediment accumulation (68%) detected by AI. Desiltation needed.</div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px; padding-top: 8px; border-top: 1px solid #e2e8f0; font-size: 11px;">
+                      <span style="color: #64748b;">Silt Severity:</span>
+                      <b style="color: #dc2626;">68% (Critical Silt)</b>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 3px; font-size: 11px;">
+                      <span style="color: #64748b;">AI Confidence:</span>
+                      <b style="color: #059669;">93.4% YOLOv8</b>
+                    </div>
+                  </div>
+                  <div style="display: flex; gap: 6px; margin-top: 12px;">
+                    <button class="btn btn-danger" style="flex: 1; padding: 5px 6px; font-size: 10.5px;" onclick="openAIWithSample('sample_farm_pond.jpg')">⚠️ Inspect Silt Alert</button>
+                    <button class="btn" style="padding: 5px 8px; font-size: 10.5px; background: #ffffff; color: #0f172a; border-color: #cbd5e1;" onclick="showOnMap(27.0200, 78.3100)">🗺️ Map</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4: Contour Bunding Network -->
+              <div class="real-asset-card" style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column;">
+                <div style="position: relative; height: 145px; overflow: hidden; background: #e2e8f0;">
+                  <img src="assets/sample_contour_bund.jpg" alt="Contour Bunding Network" style="width: 100%; height: 100%; object-fit: cover;" class="asset-zoom-img">
+                  <span class="badge-status badge-verified" style="position: absolute; top: 8px; right: 8px; font-size: 10px; background: rgba(255, 255, 255, 0.95); box-shadow: 0 2px 6px rgba(0,0,0,0.15);">● Moisture High</span>
+                  <span style="position: absolute; bottom: 8px; left: 8px; background: rgba(15, 23, 42, 0.85); color: #fff; font-size: 9.5px; font-weight: 700; padding: 2px 6px; border-radius: 4px; font-family: monospace;">GPS: 25.2450°N, 78.4720°E</span>
+                </div>
+                <div style="padding: 12px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                  <div>
+                    <div style="font-size: 10.5px; font-weight: 700; color: #0284c7; text-transform: uppercase;">WD-402 • Jhansi (UP)</div>
+                    <div style="font-size: 13px; font-weight: 800; color: #0f172a; margin-top: 2px;">Contour Bunding & Terracing</div>
+                    <div style="font-size: 11.5px; color: #475569; margin-top: 4px; line-height: 1.4;">Continuous contour ridges prevent sheet erosion and retain soil moisture.</div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px; padding-top: 8px; border-top: 1px solid #e2e8f0; font-size: 11px;">
+                      <span style="color: #64748b;">Soil Moisture:</span>
+                      <b style="color: #059669;">76% (Retained)</b>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 3px; font-size: 11px;">
+                      <span style="color: #64748b;">AI Confidence:</span>
+                      <b style="color: #059669;">95.5% YOLOv8</b>
+                    </div>
+                  </div>
+                  <div style="display: flex; gap: 6px; margin-top: 12px;">
+                    <button class="btn btn-primary" style="flex: 1; padding: 5px 6px; font-size: 10.5px;" onclick="openAIWithSample('sample_contour_bund.jpg')">🔬 AI Vision Scan</button>
+                    <button class="btn" style="padding: 5px 8px; font-size: 10.5px; background: #ffffff; color: #0f172a; border-color: #cbd5e1;" onclick="showOnMap(25.2450, 78.4720)">🗺️ Map</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- 7 National MIS Cumulative KPI Counters (From User's Official Portal Photo) -->
+          <!-- 7 National MIS Cumulative KPI Counters (Clean White Government Portal Style) -->
           <div class="national-mis-ribbon">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 6px;">
-              <div style="font-size: 11px; font-weight: 800; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 0.8px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; border-bottom: 1px solid #e2e8f0; padding-bottom: 6px;">
+              <div style="font-size: 11.5px; font-weight: 800; color: #1e3a8a; text-transform: uppercase; letter-spacing: 0.8px;">
                 🏛️ WDC-PMKSY 2.0 National MIS Cumulative Benchmarks (Department of Land Resources)
               </div>
-              <div style="font-size: 10.5px; color: var(--text-muted);">
+              <div style="font-size: 10.5px; color: #64748b; font-weight: 600;">
                 Official National Progress Metrics
               </div>
             </div>
@@ -249,19 +369,19 @@
             </p>
 
             <div class="grid-3" style="margin-bottom: 0;">
-              <div style="background: rgba(12, 28, 48, 0.6); padding: 14px; border-radius: 10px; border: 1px solid var(--border);">
+              <div style="background: #f8fafc; padding: 14px; border-radius: 10px; border: 1px solid var(--border);">
                 <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">NDVI Recovery Gain</div>
                 <div style="font-size: 22px; font-weight: 700; color: var(--accent-teal); margin-top: 4px;">+0.35</div>
                 <div style="font-size: 11px; color: var(--text-secondary);">Avg. post-project biomass</div>
               </div>
-              <div style="background: rgba(12, 28, 48, 0.6); padding: 14px; border-radius: 10px; border: 1px solid var(--border);">
+              <div style="background: #f8fafc; padding: 14px; border-radius: 10px; border: 1px solid var(--border);">
                 <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Anti-Tamper Score</div>
-                <div style="font-size: 22px; font-weight: 700; color: #38bdf8; margin-top: 4px;">99.4%</div>
+                <div style="font-size: 22px; font-weight: 700; color: #0284c7; margin-top: 4px;">99.4%</div>
                 <div style="font-size: 11px; color: var(--text-secondary);">SHA-256 hash verified</div>
               </div>
-              <div style="background: rgba(12, 28, 48, 0.6); padding: 14px; border-radius: 10px; border: 1px solid var(--border);">
+              <div style="background: #f8fafc; padding: 14px; border-radius: 10px; border: 1px solid var(--border);">
                 <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">AI Detection Rate</div>
-                <div style="font-size: 22px; font-weight: 700; color: #fbbf24; margin-top: 4px;">91.8%</div>
+                <div style="font-size: 22px; font-weight: 700; color: #d97706; margin-top: 4px;">91.8%</div>
                 <div style="font-size: 11px; color: var(--text-secondary);">Water structure accuracy</div>
               </div>
             </div>
@@ -273,30 +393,30 @@
             </div>
             <div style="display: flex; flex-direction: column; gap: 12px; font-size: 13px;">
               <div style="display: flex; gap: 12px; align-items: flex-start; cursor: pointer;" onclick="navigateTo('upload')">
-                <div style="background: rgba(16, 185, 129, 0.2); color: var(--accent-teal); font-weight: 800; width: 26px; height: 26px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+                <div style="background: #ecfdf5; color: var(--accent-teal); font-weight: 800; width: 26px; height: 26px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid #a7f3d0;">1</div>
                 <div>
-                  <b style="color: #fff;">Field Photo Capture</b>
+                  <b style="color: var(--text-primary);">Field Photo Capture</b>
                   <div style="font-size: 12px; color: var(--text-secondary);">Inspects EXIF timestamp, camera hardware, and GPS tags.</div>
                 </div>
               </div>
               <div style="display: flex; gap: 12px; align-items: flex-start; cursor: pointer;" onclick="navigateTo('upload')">
-                <div style="background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); font-weight: 800; width: 26px; height: 26px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+                <div style="background: #f0f9ff; color: var(--accent-cyan); font-weight: 800; width: 26px; height: 26px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid #bae6fd;">2</div>
                 <div>
-                  <b style="color: #fff;">Anti-Fraud SHA-256 Check</b>
+                  <b style="color: var(--text-primary);">Anti-Fraud SHA-256 Check</b>
                   <div style="font-size: 12px; color: var(--text-secondary);">Eliminates duplicate submissions across different project claims.</div>
                 </div>
               </div>
               <div style="display: flex; gap: 12px; align-items: flex-start; cursor: pointer;" onclick="navigateTo('analysis')">
-                <div style="background: rgba(245, 158, 11, 0.2); color: var(--accent-amber); font-weight: 800; width: 26px; height: 26px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+                <div style="background: #fffbeb; color: var(--accent-amber); font-weight: 800; width: 26px; height: 26px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid #fde68a;">3</div>
                 <div>
-                  <b style="color: #fff;">AI Computer Vision</b>
+                  <b style="color: var(--text-primary);">AI Computer Vision</b>
                   <div style="font-size: 12px; color: var(--text-secondary);">Detects check dams, ponds, water presence & siltation.</div>
                 </div>
               </div>
               <div style="display: flex; gap: 12px; align-items: flex-start; cursor: pointer;" onclick="navigateTo('ndvi')">
-                <div style="background: rgba(59, 130, 246, 0.2); color: #60a5fa; font-weight: 800; width: 26px; height: 26px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+                <div style="background: #eff6ff; color: #2563eb; font-weight: 800; width: 26px; height: 26px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid #bfdbfe;">4</div>
                 <div>
-                  <b style="color: #fff;">Satellite Cross-Check (NDVI)</b>
+                  <b style="color: var(--text-primary);">Satellite Cross-Check (NDVI)</b>
                   <div style="font-size: 12px; color: var(--text-secondary);">Verifies vegetation regeneration in catchment zone.</div>
                 </div>
               </div>
@@ -484,9 +604,9 @@
             <div class="upload-dropzone" id="uploadDropzone" onclick="document.getElementById('fieldPhotoInput').click()" style="border: 2px dashed var(--accent-cyan); cursor: pointer;">
               <input type="file" id="fieldPhotoInput" accept="image/*" style="display: none;" onchange="handleFilePicked(this)">
               <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
-              <div style="font-size: 15px; font-weight: 700; color: #fff;" id="uploadPromptText">Click to Browse or Drag & Drop Field Photo</div>
+              <div style="font-size: 15px; font-weight: 700; color: var(--text-primary);" id="uploadPromptText">Click to Browse or Drag & Drop Field Photo</div>
               <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">Supports JPG, JPEG, PNG directly from smartphone camera</div>
-              <button type="button" class="btn" style="margin-top: 10px; font-size: 12px; background: rgba(14, 30, 50, 0.9);" onclick="event.stopPropagation(); document.getElementById('fieldPhotoInput').click()">📁 Choose File from Computer</button>
+              <button type="button" class="btn" style="margin-top: 10px; font-size: 12px; background: #ffffff; color: #0f172a; border: 1px solid #cbd5e1;" onclick="event.stopPropagation(); document.getElementById('fieldPhotoInput').click()">📁 Choose File from Computer</button>
               <img id="uploadPreviewImg" class="file-preview-img" alt="Evidence Preview" style="display: none; max-height: 240px; margin: 12px auto 0 auto;">
             </div>
 
@@ -498,33 +618,33 @@
               </div>
               <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
                 <!-- Sample 1 -->
-                <div class="card" style="padding: 10px; background: rgba(11, 26, 45, 0.9); border: 1px solid var(--border-light); cursor: pointer; transition: transform 0.2s;" onclick="loadAndVerifyPreset('sample_check_dam.jpg', 'WD-204')">
+                <div class="card" style="padding: 10px; background: #f8fafc; border: 1px solid #cbd5e1; cursor: pointer; transition: transform 0.2s;" onclick="loadAndVerifyPreset('sample_check_dam.jpg', 'WD-204')">
                   <img src="assets/sample_check_dam.jpg" style="width: 100%; height: 75px; object-fit: cover; border-radius: 6px; margin-bottom: 6px;" alt="Check Dam">
-                  <div style="font-size: 12px; font-weight: 700; color: #fff;">1. Masonry Check Dam</div>
+                  <div style="font-size: 12px; font-weight: 700; color: #0f172a;">1. Masonry Check Dam</div>
                   <div style="font-size: 11px; color: var(--accent-teal);">WD-204 Mathura • Verified (84% Water)</div>
                   <button type="button" class="btn btn-primary" style="width: 100%; padding: 4px 6px; font-size: 10px; margin-top: 6px;" onclick="event.stopPropagation(); loadAndVerifyPreset('sample_check_dam.jpg', 'WD-204')">⚡ Test Check Dam</button>
                 </div>
 
                 <!-- Sample 2 -->
-                <div class="card" style="padding: 10px; background: rgba(11, 26, 45, 0.9); border: 1px solid var(--border-light); cursor: pointer; transition: transform 0.2s;" onclick="loadAndVerifyPreset('sample_farm_pond.jpg', 'WD-118')">
+                <div class="card" style="padding: 10px; background: #f8fafc; border: 1px solid #cbd5e1; cursor: pointer; transition: transform 0.2s;" onclick="loadAndVerifyPreset('sample_farm_pond.jpg', 'WD-118')">
                   <img src="assets/sample_farm_pond.jpg" style="width: 100%; height: 75px; object-fit: cover; border-radius: 6px; margin-bottom: 6px;" alt="Farm Pond">
-                  <div style="font-size: 12px; font-weight: 700; color: #fff;">2. Earthen Farm Pond</div>
+                  <div style="font-size: 12px; font-weight: 700; color: #0f172a;">2. Earthen Farm Pond</div>
                   <div style="font-size: 11px; color: var(--accent-rose);">WD-118 Agra • Flagged (68% Silt)</div>
                   <button type="button" class="btn btn-danger" style="width: 100%; padding: 4px 6px; font-size: 10px; margin-top: 6px;" onclick="event.stopPropagation(); loadAndVerifyPreset('sample_farm_pond.jpg', 'WD-118')">⚡ Test Silted Pond</button>
                 </div>
 
                 <!-- Sample 3 -->
-                <div class="card" style="padding: 10px; background: rgba(11, 26, 45, 0.9); border: 1px solid var(--border-light); cursor: pointer; transition: transform 0.2s;" onclick="loadAndVerifyPreset('sample_percolation_tank.jpg', 'WD-311')">
+                <div class="card" style="padding: 10px; background: #f8fafc; border: 1px solid #cbd5e1; cursor: pointer; transition: transform 0.2s;" onclick="loadAndVerifyPreset('sample_percolation_tank.jpg', 'WD-311')">
                   <img src="assets/sample_percolation_tank.jpg" style="width: 100%; height: 75px; object-fit: cover; border-radius: 6px; margin-bottom: 6px;" alt="Percolation Tank">
-                  <div style="font-size: 12px; font-weight: 700; color: #fff;">3. Percolation Tank</div>
+                  <div style="font-size: 12px; font-weight: 700; color: #0f172a;">3. Percolation Tank</div>
                   <div style="font-size: 11px; color: var(--accent-teal);">WD-311 Aligarh • Verified (91% Recharge)</div>
                   <button type="button" class="btn btn-primary" style="width: 100%; padding: 4px 6px; font-size: 10px; margin-top: 6px;" onclick="event.stopPropagation(); loadAndVerifyPreset('sample_percolation_tank.jpg', 'WD-311')">⚡ Test Recharge Tank</button>
                 </div>
 
                 <!-- Sample 4 -->
-                <div class="card" style="padding: 10px; background: rgba(11, 26, 45, 0.9); border: 1px solid var(--border-light); cursor: pointer; transition: transform 0.2s;" onclick="loadAndVerifyPreset('sample_contour_bund.jpg', 'WD-402')">
+                <div class="card" style="padding: 10px; background: #f8fafc; border: 1px solid #cbd5e1; cursor: pointer; transition: transform 0.2s;" onclick="loadAndVerifyPreset('sample_contour_bund.jpg', 'WD-402')">
                   <img src="assets/sample_contour_bund.jpg" style="width: 100%; height: 75px; object-fit: cover; border-radius: 6px; margin-bottom: 6px;" alt="Contour Bunding">
-                  <div style="font-size: 12px; font-weight: 700; color: #fff;">4. Contour Bunding</div>
+                  <div style="font-size: 12px; font-weight: 700; color: #0f172a;">4. Contour Bunding</div>
                   <div style="font-size: 11px; color: var(--accent-teal);">WD-402 Jhansi • Verified (76% Moisture)</div>
                   <button type="button" class="btn btn-primary" style="width: 100%; padding: 4px 6px; font-size: 10px; margin-top: 6px;" onclick="event.stopPropagation(); loadAndVerifyPreset('sample_contour_bund.jpg', 'WD-402')">⚡ Test Bunding</button>
                 </div>
@@ -553,7 +673,7 @@
             <div id="verificationResultBox">
               <div style="text-align: center; padding: 48px 20px; color: var(--text-muted);">
                 <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom: 12px; stroke: var(--accent-cyan);"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-                <h4 style="color: #fff; font-size: 15px; margin-bottom: 6px;">Select or Upload a Photo</h4>
+                <h4 style="color: var(--text-primary); font-size: 15px; margin-bottom: 6px;">Select or Upload a Photo</h4>
                 <p style="font-size: 12px; line-height: 1.6;">Click any of the 4 sample photos on the left, or browse your own image to test EXIF GPS extraction, anti-fraud SHA-256 duplicate verification, and AI classification.</p>
               </div>
             </div>
@@ -599,10 +719,10 @@
                 <button type="button" class="btn btn-danger" style="padding: 7px 10px; font-size: 11.5px; text-align: left; display: flex; align-items: center; gap: 6px;" onclick="loadSampleForAI('assets/sample_farm_pond.jpg')">
                   <span>⚠️</span> <b>2. Silted Farm Pond (Agra • 68% Alert)</b>
                 </button>
-                <button type="button" class="btn" style="padding: 7px 10px; font-size: 11.5px; text-align: left; display: flex; align-items: center; gap: 6px; background: rgba(14, 30, 50, 0.9);" onclick="loadSampleForAI('assets/sample_percolation_tank.jpg')">
+                <button type="button" class="btn" style="padding: 7px 10px; font-size: 11.5px; text-align: left; display: flex; align-items: center; gap: 6px; background: #ffffff; color: #0f172a; border: 1px solid #cbd5e1;" onclick="loadSampleForAI('assets/sample_percolation_tank.jpg')">
                   <span>💧</span> <b>3. Percolation Tank (Aligarh • 91%)</b>
                 </button>
-                <button type="button" class="btn" style="padding: 7px 10px; font-size: 11.5px; text-align: left; display: flex; align-items: center; gap: 6px; background: rgba(14, 30, 50, 0.9);" onclick="loadSampleForAI('assets/sample_contour_bund.jpg')">
+                <button type="button" class="btn" style="padding: 7px 10px; font-size: 11.5px; text-align: left; display: flex; align-items: center; gap: 6px; background: #ffffff; color: #0f172a; border: 1px solid #cbd5e1;" onclick="loadSampleForAI('assets/sample_contour_bund.jpg')">
                   <span>🧱</span> <b>4. Contour Bund (Jhansi • 76%)</b>
                 </button>
               </div>
@@ -610,11 +730,11 @@
               <!-- Upload & Cross-Navigation Strip -->
               <div style="display: flex; gap: 8px; justify-content: space-between; align-items: center; flex-wrap: wrap; border-top: 1px solid var(--border); padding-top: 12px;">
                 <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                  <button type="button" class="btn" style="padding: 6px 12px; font-size: 11.5px; background: rgba(6, 182, 212, 0.15); border-color: var(--accent-cyan); color: #a5f3fc;" onclick="loadSampleForAI('uploaded')">
+                  <button type="button" class="btn" style="padding: 6px 12px; font-size: 11.5px; background: #e0f2fe; border-color: #0284c7; color: #0369a1; font-weight: 700;" onclick="loadSampleForAI('uploaded')">
                     📁 Analyze Uploaded Field Photo
                   </button>
                   <input type="file" id="aiDirectFileInput" accept="image/*" style="display: none;" onchange="handleAIDirectUpload(this)">
-                  <button type="button" class="btn" style="padding: 6px 12px; font-size: 11.5px; background: rgba(14, 30, 50, 0.9);" onclick="document.getElementById('aiDirectFileInput').click()">
+                  <button type="button" class="btn" style="padding: 6px 12px; font-size: 11.5px; background: #ffffff; color: #0f172a; border: 1px solid #cbd5e1;" onclick="document.getElementById('aiDirectFileInput').click()">
                     📷 Choose Any Image...
                   </button>
                 </div>
@@ -636,7 +756,7 @@
 
             <!-- Active Structure Info -->
             <div style="margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid var(--border);">
-              <div id="aiActiveStructureTitle" style="font-size: 15px; font-weight: 800; color: #fff;">
+              <div id="aiActiveStructureTitle" style="font-size: 15px; font-weight: 800; color: var(--text-primary);">
                 Masonry Check Dam (WD-204 Mathura)
               </div>
               <div id="aiActiveStructureSubtitle" style="font-size: 11.5px; color: var(--accent-cyan); margin-top: 2px;">
@@ -651,7 +771,7 @@
                   <span style="color: var(--text-secondary);" id="aiMetricStructureLabel">Structure Confidence (Masonry Check Dam)</span>
                   <b style="color: var(--accent-teal);" id="aiMetricStructureConf">96.8%</b>
                 </div>
-                <div style="height: 6px; background: #13273e; border-radius: 99px; overflow: hidden;">
+                <div style="height: 6px; background: #e2e8f0; border-radius: 99px; overflow: hidden;">
                   <div id="aiMetricStructureBar" style="width: 96.8%; height: 100%; background: var(--accent-teal); transition: width 0.4s ease;"></div>
                 </div>
               </div>
@@ -660,10 +780,10 @@
               <div>
                 <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
                   <span style="color: var(--text-secondary);">Water Body Retention Volume</span>
-                  <b style="color: #38bdf8;" id="aiMetricWaterVal">84% (Adequate Storage)</b>
+                  <b style="color: #0284c7;" id="aiMetricWaterVal">84% (Adequate Storage)</b>
                 </div>
-                <div style="height: 6px; background: #13273e; border-radius: 99px; overflow: hidden;">
-                  <div id="aiMetricWaterBar" style="width: 84%; height: 100%; background: #38bdf8; transition: width 0.4s ease;"></div>
+                <div style="height: 6px; background: #e2e8f0; border-radius: 99px; overflow: hidden;">
+                  <div id="aiMetricWaterBar" style="width: 84%; height: 100%; background: #0284c7; transition: width 0.4s ease;"></div>
                 </div>
               </div>
 
@@ -673,24 +793,24 @@
                   <span style="color: var(--text-secondary);">Siltation Deposit Severity</span>
                   <b style="color: var(--accent-amber);" id="aiMetricSiltVal">8% (Low Siltation)</b>
                 </div>
-                <div style="height: 6px; background: #13273e; border-radius: 99px; overflow: hidden;">
+                <div style="height: 6px; background: #e2e8f0; border-radius: 99px; overflow: hidden;">
                   <div id="aiMetricSiltBar" style="width: 8%; height: 100%; background: var(--accent-amber); transition: width 0.4s ease;"></div>
                 </div>
               </div>
 
               <!-- Dynamic Civil Alert Box -->
-              <div id="aiSiltAlertBox" style="background: rgba(16, 185, 129, 0.12); border: 1px solid #10b981; padding: 12px; border-radius: 8px; margin-top: 4px; transition: all 0.3s ease;">
-                <div id="aiAuditVerdict" style="font-size: 11px; font-weight: 800; color: #34d399; text-transform: uppercase;">
+              <div id="aiSiltAlertBox" style="background: #ecfdf5; border: 1px solid #10b981; padding: 12px; border-radius: 8px; margin-top: 4px; transition: all 0.3s ease;">
+                <div id="aiAuditVerdict" style="font-size: 11px; font-weight: 800; color: #065f46; text-transform: uppercase;">
                   ✓ CIVIL AUDIT CLEARANCE: APPROVED
                 </div>
-                <p id="aiAuditVerdictDesc" style="font-size: 12px; color: #cbd5e1; margin-top: 4px; line-height: 1.5;">
+                <p id="aiAuditVerdictDesc" style="font-size: 12px; color: #334155; margin-top: 4px; line-height: 1.5;">
                   Structure verified intact. Spillway crest open, water retention optimal with negligible sediment buildup.
                 </p>
               </div>
 
               <!-- Technical Observation Notice -->
-              <div style="background: rgba(12, 28, 48, 0.7); border: 1px solid var(--border); padding: 12px; border-radius: 8px;">
-                <div style="font-size: 11px; font-weight: 700; color: #38bdf8; text-transform: uppercase;">
+              <div style="background: #f8fafc; border: 1px solid var(--border); padding: 12px; border-radius: 8px;">
+                <div style="font-size: 11px; font-weight: 700; color: #0284c7; text-transform: uppercase;">
                   Decision Support & Disbursement Rule
                 </div>
                 <p id="aiAuditNotes" style="font-size: 12px; color: var(--text-secondary); margin-top: 4px; line-height: 1.5;">
@@ -703,7 +823,7 @@
                 <button class="btn btn-primary" style="padding: 6px 10px; font-size: 11px;" onclick="navigateTo('reports')">
                   📋 Compliance Report &rarr;
                 </button>
-                <button class="btn" style="padding: 6px 10px; font-size: 11px; background: rgba(14, 30, 50, 0.9);" onclick="navigateTo('ndvi')">
+                <button class="btn" style="padding: 6px 10px; font-size: 11px; background: #ffffff; color: #0f172a; border: 1px solid #cbd5e1;" onclick="navigateTo('ndvi')">
                   🛰️ Satellite NDVI &rarr;
                 </button>
               </div>
@@ -736,7 +856,7 @@
               </select>
 
               <!-- View Mode Toggles -->
-              <div style="display: flex; gap: 4px; background: rgba(255,255,255,0.04); padding: 3px; border-radius: 8px; border: 1px solid var(--border);">
+              <div style="display: flex; gap: 4px; background: #f1f5f9; padding: 3px; border-radius: 8px; border: 1px solid #cbd5e1;">
                 <button class="ndvi-mode-pill active" data-mode="truecolor" onclick="setNdviViewMode('truecolor')">🛰️ True Color</button>
                 <button class="ndvi-mode-pill" data-mode="heatmap" onclick="setNdviViewMode('heatmap')">🌈 NDVI Heatmap</button>
                 <button class="ndvi-mode-pill" data-mode="cir" onclick="setNdviViewMode('cir')">🔴 False Color CIR</button>
@@ -790,25 +910,25 @@
 
           <!-- 4 Scientific Metrics Cards -->
           <div class="grid-4" style="margin-top: 18px; margin-bottom: 0;">
-            <div style="background: rgba(12, 28, 48, 0.6); padding: 14px; border-radius: 10px; border: 1px solid var(--border);">
+            <div style="background: #f8fafc; padding: 14px; border-radius: 10px; border: 1px solid var(--border);">
               <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Pre-Project Mean NDVI</div>
               <div id="ndviPreValue" style="font-size: 24px; font-weight: 800; color: #f59e0b; margin-top: 4px;">0.21</div>
               <div style="font-size: 11px; color: var(--text-secondary); margin-top: 2px;">Sparse scrub & degraded topsoil</div>
             </div>
 
-            <div style="background: rgba(12, 28, 48, 0.6); padding: 14px; border-radius: 10px; border: 1px solid var(--border);">
+            <div style="background: #f8fafc; padding: 14px; border-radius: 10px; border: 1px solid var(--border);">
               <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Post-Intervention Mean NDVI</div>
               <div id="ndviPostValue" style="font-size: 24px; font-weight: 800; color: var(--accent-teal); margin-top: 4px;">0.58</div>
               <div style="font-size: 11px; color: var(--text-secondary); margin-top: 2px;">Dense canopy & soil moisture</div>
             </div>
 
-            <div style="background: rgba(12, 28, 48, 0.6); padding: 14px; border-radius: 10px; border: 1px solid var(--border);">
+            <div style="background: #f8fafc; padding: 14px; border-radius: 10px; border: 1px solid var(--border);">
               <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Catchment Regeneration Gain</div>
-              <div id="ndviGainValue" style="font-size: 24px; font-weight: 800; color: #38bdf8; margin-top: 4px;">+176%</div>
+              <div id="ndviGainValue" style="font-size: 24px; font-weight: 800; color: #0284c7; margin-top: 4px;">+176%</div>
               <div style="font-size: 11px; color: var(--text-secondary); margin-top: 2px;">Statistically verified outcome</div>
             </div>
 
-            <div style="background: rgba(12, 28, 48, 0.6); padding: 14px; border-radius: 10px; border: 1px solid var(--border);">
+            <div style="background: #f8fafc; padding: 14px; border-radius: 10px; border: 1px solid var(--border);">
               <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Arable Area Restored</div>
               <div id="ndviAreaValue" style="font-size: 24px; font-weight: 800; color: #a855f7; margin-top: 4px;">420 Hectares</div>
               <div style="font-size: 11px; color: var(--text-secondary); margin-top: 2px;">Double-cropping enabled</div>
@@ -816,12 +936,12 @@
           </div>
 
           <!-- Remote Sensing Metadata Banner for SIH Judges -->
-          <div style="margin-top: 14px; padding: 10px 16px; background: rgba(56, 189, 248, 0.05); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 8px; font-size: 11px; color: #94a3b8; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+          <div style="margin-top: 14px; padding: 10px 16px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; font-size: 11px; color: #334155; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
             <div>
-              <b style="color: #38bdf8;">Remote Sensing Pipeline:</b> ESA Copernicus Sentinel-2 MSI (Level-2A Bottom-of-Atmosphere Surface Reflectance) · <b>10m GSD</b> Spatial Resolution
+              <b style="color: #0284c7;">Remote Sensing Pipeline:</b> ESA Copernicus Sentinel-2 MSI (Level-2A Bottom-of-Atmosphere Surface Reflectance) · <b>10m GSD</b> Spatial Resolution
             </div>
             <div>
-              <b style="color: #10b981;">Formula:</b> <code>NDVI = (B08 - B04) / (B08 + B04)</code> · <b>Atmospheric Cloud Mask:</b> &lt; 1.8% Scene Average
+              <b style="color: #059669;">Formula:</b> <code>NDVI = (B08 - B04) / (B08 + B04)</code> · <b>Atmospheric Cloud Mask:</b> &lt; 1.8% Scene Average
             </div>
           </div>
         </div>
@@ -832,8 +952,8 @@
         <div class="card" style="margin-bottom: 20px;">
           <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
             <div style="display: flex; align-items: center; gap: 12px;">
-              <label style="font-size: 13px; font-weight: 600; color: #fff;">Select Project for Report:</label>
-              <select id="reportProjectSelect" class="select-filter" style="min-width: 320px; font-weight: 600; color: #38bdf8;" onchange="renderReportPreview(this.value)">
+              <label style="font-size: 13px; font-weight: 600; color: var(--text-primary);">Select Project for Report:</label>
+              <select id="reportProjectSelect" class="select-filter" style="min-width: 320px; font-weight: 600; color: #0284c7;" onchange="renderReportPreview(this.value)">
                 <option value="WD-204" selected>WD-204 — Mathura (Chhata Micro-Watershed Development)</option>
                 <option value="WD-118">WD-118 — Agra (Fatehabad Arid Land Watershed Project)</option>
                 <option value="WD-311">WD-311 — Aligarh (Iglas Rainwater Harvesting Basin)</option>
@@ -945,14 +1065,14 @@
   <div class="modal-card">
     <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 14px; margin-bottom: 18px;">
       <div>
-        <h3 style="color: #fff; font-size: 18px;">+ Add Watershed Project</h3>
+        <h3 style="color: var(--text-primary); font-size: 18px;">+ Add Watershed Project</h3>
         <p style="font-size: 12px; color: var(--text-secondary);">Register a new micro-watershed site for geospatial monitoring</p>
       </div>
       <button onclick="closeAddProjectModal()" style="background: none; border: none; color: var(--text-muted); font-size: 20px; cursor: pointer;">✕</button>
     </div>
 
     <!-- Quick Preset Sample Project Buttons -->
-    <div style="background: rgba(14, 30, 50, 0.7); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; margin-bottom: 18px;">
+    <div style="background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; margin-bottom: 18px;">
       <span style="font-size: 11px; font-weight: 700; color: var(--accent-cyan); text-transform: uppercase;">⚡ Quick Sample Presets (Click to Auto-Fill):</span>
       <div style="display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap;">
         <button type="button" class="btn" style="padding: 4px 10px; font-size: 11px;" onclick="fillSampleProject(1)">Sample 1: Banda Bundelkhand Project</button>
@@ -1041,7 +1161,7 @@
   <div class="modal-card" style="max-width: 520px; text-align: center;">
     <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 12px; margin-bottom: 16px;">
       <div style="text-align: left;">
-        <h3 style="color: #fff; font-size: 18px; display: flex; align-items: center; gap: 8px; margin: 0;">
+        <h3 style="color: var(--text-primary); font-size: 18px; display: flex; align-items: center; gap: 8px; margin: 0;">
           <span>📱</span> Open on Mobile / Any Device
         </h3>
         <p style="font-size: 12px; color: var(--text-secondary); margin: 4px 0 0 0;">Live Multi-Device Access (SIH 2026 Presentation)</p>
@@ -1050,8 +1170,8 @@
     </div>
 
     <!-- QR Code Section -->
-    <div style="background: rgba(14, 30, 50, 0.8); border: 1px solid var(--border-light); border-radius: 12px; padding: 18px; margin-bottom: 14px;">
-      <div style="background: #fff; padding: 10px; border-radius: 10px; display: inline-block; margin-bottom: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+    <div style="background: #f8fafc; border: 1px solid var(--border-light); border-radius: 12px; padding: 18px; margin-bottom: 14px;">
+      <div style="background: #fff; padding: 10px; border-radius: 10px; display: inline-block; margin-bottom: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #cbd5e1;">
         <img id="deviceShareQrImg" src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https%3A%2F%2Fradios-turtle-writes-airports.trycloudflare.com" alt="QR Code for Mobile Access" style="width: 160px; height: 160px; display: block;">
       </div>
       <div style="font-size: 13px; font-weight: 700; color: var(--accent-cyan);">
@@ -1063,15 +1183,15 @@
     </div>
 
     <!-- Public HTTPS URL Card -->
-    <div style="background: rgba(12, 28, 48, 0.9); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 8px; padding: 12px; margin-bottom: 12px; text-align: left;">
+    <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 12px; margin-bottom: 12px; text-align: left;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-        <span style="font-size: 11px; font-weight: 800; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.5px;">
+        <span style="font-size: 11px; font-weight: 800; color: #0284c7; text-transform: uppercase; letter-spacing: 0.5px;">
           🌐 Universal Public Link (Works on Every Device):
         </span>
         <span class="badge-status badge-verified" style="font-size: 10px;">● Live Cloudflare HTTPS</span>
       </div>
       <div style="display: flex; gap: 8px; align-items: center;">
-        <input type="text" id="publicUrlInput" class="form-input" style="font-size: 12.5px; font-family: monospace; color: #a5f3fc; background: #061527;" value="https://radios-turtle-writes-airports.trycloudflare.com" readonly>
+        <input type="text" id="publicUrlInput" class="form-input" style="font-size: 12.5px; font-family: monospace; color: #0284c7; background: #ffffff;" value="https://radios-turtle-writes-airports.trycloudflare.com" readonly>
         <button type="button" class="btn btn-primary" style="padding: 6px 14px; font-size: 11.5px; flex-shrink: 0;" onclick="copyPublicUrl()">
           📋 Copy
         </button>
@@ -1079,11 +1199,11 @@
     </div>
 
     <!-- Local Wi-Fi Link Card -->
-    <div style="background: rgba(12, 28, 48, 0.7); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; text-align: left; margin-bottom: 16px;">
+    <div style="background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; text-align: left; margin-bottom: 16px;">
       <div style="font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 4px;">
         📶 Same Wi-Fi / Hotspot Local IP:
       </div>
-      <div style="font-size: 12px; color: #cbd5e1; font-family: monospace;">
+      <div style="font-size: 12px; color: #0f172a; font-family: monospace;">
         <span id="wifiUrlText">http://10.248.145.236:5000</span>
       </div>
     </div>
